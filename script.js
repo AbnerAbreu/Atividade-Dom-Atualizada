@@ -16,23 +16,30 @@ let botao = document.querySelector("button");
 let texto = document.querySelector("p");
 let naoSou = document.querySelector("a");
 let dn = document.querySelector("h3");
+let div = document.querySelector("div");
+let section = document.querySelector("section");
 
-if(localStorage.Nome){
-    texto.innerHTML = `seja bem vindo ${localStorage.Nome}`;
-    localStorage.setItem('Nome', caixaTexto.value);
-    naoSou.innerHTML = `Não é ${localStorage.Nome}?`;
-    caixaTexto.style.display = "none";
-    dn.style.display = "none";
-    botao.style.display = "none";
+if(localStorage.nome){
+    div.style.display="none";
+    section.style.display="initial";
+    texto.innerHTML=`Seja bem vindo ${localStorage.nome}`;
+    naoSou.innerHTML=`Não sou ${localStorage.nome};`
 }
 else{
-    texto.innerHTML = `seja bem vindo ${localStorage.Nome}`;
-    localStorage.setItem('Nome', caixaTexto.value);
-    naoSou.innerHTML = `Não é ${localStorage.Nome}?`;
-    function acessar()
+    function acessar(){
+        div.style.display="initial";
+        localStorage.setItem("nome", caixaTexto.value);
+        if(localStorage.nome){
+            div.style.display="none";
+            section.style.display="initial";
+            texto.innerHTML=`Seja bem vindo ${localStorage.nome}`;
+            naoSou.innerHTML=`Não sou ${localStorage.nome};`
+        }
+    }
 }
+
 function limpar(){
-    localStorage.clear();
+    localStorage.removeItem('nome');
 }
 
 botao.onclick = acessar;
