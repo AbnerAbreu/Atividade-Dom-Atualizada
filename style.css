@@ -3,5 +3,33 @@
 }
 body{
     display: flex;
-    
+    align-content: center;
+    justify-content: center;
+    background-image: url(wp1809863.jpg);
+    background-size: cover;
 }
+div{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 300px;
+    background-image: url(wp1809863.jpg);
+    background-size: cover;
+}
+button{
+    margin:30px;
+    border: none;
+    color: rgb(3, 7, 192);
+    background-color: blueviolet;
+}
+h3{
+    margin: 17px;
+    color:rgb(224, 225, 233);
+}
+input{
+    width: 100px;
+    border: none;
+}
+

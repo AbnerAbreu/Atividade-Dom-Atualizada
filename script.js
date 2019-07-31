@@ -23,7 +23,7 @@ if(localStorage.nome){
     div.style.display="none";
     section.style.display="initial";
     texto.innerHTML=`Seja bem vindo ${localStorage.nome}`;
-    naoSou.innerHTML=`Não sou ${localStorage.nome};`
+    naoSou.innerHTML=`Não sou ${localStorage.nome}?`;
 }
 else{
     function acessar(){
@@ -33,7 +33,7 @@ else{
             div.style.display="none";
             section.style.display="initial";
             texto.innerHTML=`Seja bem vindo ${localStorage.nome}`;
-            naoSou.innerHTML=`Não sou ${localStorage.nome};`
+            naoSou.innerHTML=`Não sou ${localStorage.nome}?`
         }
     }
 }
